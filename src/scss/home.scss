@@ -95,15 +95,26 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
   .wrapper {
     width: 100vw;
     justify-content: start;
   }
   .construction {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   .details__wrapper {
+    font-size: 12px;
     left: 0;
+  }
+
+  .name {
+    top: -307px;
+  }
+  .projects__container {
+    margin-right: 0;
   }
 }
