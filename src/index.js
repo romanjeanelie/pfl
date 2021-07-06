@@ -16,11 +16,10 @@ const lettersContactTitle = new SplitText(".contact__container h2", { type: "wor
 const tl = gsap.timeline();
 
 gsap.from(lettersConstruction.chars, {
-  opacity: 0,
-  skewX: "15deg",
+  rotateY: "90deg",
   delay: 0.3,
   stagger: 0.07,
-  duration: 4,
+  duration: 7,
   ease: "back.out",
 });
 
