@@ -1,7 +1,6 @@
 .container {
   display: flex;
   justify-content: center;
-  //   align-items: center;
   flex-direction: column;
   height: 100%;
 }
@@ -9,16 +8,33 @@
 .wrapper {
   margin: 0 auto;
   position: relative;
-  width: 910px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  border: 1px solid blue; 
+
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-template-rows: repeat(3,1fr);
 }
 
+
+
+.construction {
+  font-size: 100px;
+  text-align: center;
+
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 2;
+}
+
+
 .name {
-  top: -334px;
-  position: absolute;
-  display: inline-block;
+  border: 1px solid red; 
   opacity: 0.6;
+  grid-column-start: 2;
+  grid-row-start: 1;
   h1 {
     overflow: hidden;
   }
@@ -28,26 +44,12 @@
   }
 }
 
-.construction {
-  margin-top: -100px;
-  display: inline-block;
-  font-size: 100px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.details__wrapper {
-  margin-top: -108px;
-  font-size: 14px;
-  top: 200px;
-  right: 0;
-  position: absolute;
-  text-transform: uppercase;
-}
-
 .info__container {
   display: flex;
-
+  justify-content: flex-end;
+  border: 1px solid green; 
+  grid-column-start: 2;
+  grid-row-start: 3;
   h2 {
     margin-bottom: 24px;
     overflow: hidden;
@@ -72,49 +74,20 @@
   margin-right: 128px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .wrapper {
-    width: 70vw;
-  }
-  .construction {
-    font-size: 60px;
-  }
-  .details__wrapper {
-    margin-top: -172px;
-  }
-
-  .name {
-    top: -236px;
-  }
-  .contact__container {
-    margin-top: 32px;
-  }
-  .info__container {
-    flex-direction: column;
-  }
+@media (min-width: 1800px) {
+ .construction{
+   font-size: 150px;
+ }
+}
+@media (max-width: 1220px) {
+  .construction{
+   font-size: 80px;
+ }
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-  .wrapper {
-    width: 100vw;
-    justify-content: start;
-  }
-  .construction {
-    font-size: 32px;
-  }
-
-  .details__wrapper {
-    font-size: 12px;
-    left: 0;
-  }
-
-  .name {
-    top: -307px;
-  }
-  .projects__container {
-    margin-right: 0;
-  }
+@media (max-width: 768px) {
+  .construction{
+    max-width: 600px;
+    word-break: break-word;
+ }
 }
