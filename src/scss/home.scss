@@ -11,14 +11,12 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid blue; 
+  // border: 1px solid blue;
 
   display: grid;
-  grid-template-columns: repeat(2,auto);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
 }
-
-
 
 .construction {
   font-size: 100px;
@@ -29,12 +27,14 @@
   grid-row-start: 2;
 }
 
-
 .name {
-  border: 1px solid red; 
-  opacity: 0.6;
+  // border: 1px solid red;
+  margin-bottom: 92px;
+  opacity: 1;
   grid-column-start: 2;
   grid-row-start: 1;
+  text-transform: uppercase;
+  color: #282828;
   h1 {
     overflow: hidden;
   }
@@ -45,13 +45,20 @@
 }
 
 .info__container {
+  // border: 1px solid green;
+  margin-top: 140px;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid green; 
+
   grid-column-start: 2;
   grid-row-start: 3;
+
+  text-transform: uppercase;
   h2 {
     margin-bottom: 24px;
+    overflow: hidden;
+  }
+  li {
     overflow: hidden;
   }
 
@@ -74,20 +81,76 @@
   margin-right: 128px;
 }
 
-@media (min-width: 1800px) {
- .construction{
-   font-size: 150px;
- }
-}
+// @media (min-width: 1800px) {
+//  .construction{
+//    font-size: 150px;
+//  }
+// }
 @media (max-width: 1220px) {
-  .construction{
-   font-size: 80px;
- }
+  .construction {
+    font-size: 80px;
+  }
 }
 
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: repeat(2, min-content);
+  }
+  .construction {
+    text-align: left;
+    font-size: 80px;
+  }
+
+  .name {
+    grid-column-start: 2;
+  }
+
+  .info__container {
+    min-width: 405px;
+
+    font-size: 14px;
+
+    grid-column-start: 2;
+  }
+
+  .projects__container {
+    margin-right: 27px;
+  }
+}
 @media (max-width: 768px) {
-  .construction{
-    max-width: 600px;
-    word-break: break-word;
- }
+  .wrapper {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .name {
+    font-size: 12px;
+
+    grid-column-start: 1;
+  }
+  .construction {
+    font-size: 30px;
+
+    grid-column-end: span 1;
+  }
+
+  .info__container {
+    font-size: 12px;
+
+    display: block;
+    margin-top: 50px;
+
+    grid-column-start: 1;
+    grid-row-start: unset;
+  }
+
+  .projects__container {
+    grid-row-start: 3;
+  }
+
+  .contact__container {
+    grid-row-start: 4;
+
+    margin-top: 50px;
+  }
 }
