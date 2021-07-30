@@ -12,23 +12,22 @@ const lettersNameInfo = new SplitText(".name p", { type: "words" });
 const lettersProjectTitle = new SplitText(".projects__container h2", { type: "words, chars" });
 const lettersContactTitle = new SplitText(".contact__container h2", { type: "words, chars" });
 
-const tl = gsap.timeline();
-
-gsap.from(".construction", {
-  opacity: 0,
-  duration: 4,
-  delay: 0.7,
-  // ease: "power2.out",
+gsap.to(".wrapper", {
+  opacity: 1,
+  duration: 1,
+  ease: "power2.in",
 });
+
 gsap.from(lettersName.words, {
   y: 60,
-  duration: 2,
+  duration: 3,
   stagger: 0,
+  ease: "power2.out",
 });
 
 gsap.from(lettersNameInfo.words, {
   y: 60,
-  duration: 2,
+  duration: 3,
   stagger: 0,
 });
 
