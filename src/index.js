@@ -3,10 +3,6 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText);
 
-const projectLinks = document.querySelectorAll(".projects__container ul li a");
-const contactLinks = document.querySelectorAll(".contact__container ul li a");
-
-// const lettersConstruction = new SplitText(".construction", { type: "chars" });
 const lettersName = new SplitText(".name h1", { type: "words" });
 const lettersNameInfo = new SplitText(".name p", { type: "words" });
 const lettersProjectTitle = new SplitText(".projects__container h2", { type: "words, chars" });
